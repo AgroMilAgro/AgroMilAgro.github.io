@@ -16,6 +16,14 @@
         .accent-green { color: #166534; }
         .bg-accent-green { background-color: #166534; }
         .logo-placeholder { max-height: 50px; width: auto; }
+        /* Estilo para evitar que el logo roto se vea mal */
+        img[alt]:after {  
+            display: block;
+            content: attr(alt);
+            font-weight: bold;
+            color: #166534;
+            background-color: transparent;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800 antialiased">
@@ -25,9 +33,12 @@
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <!-- Espacio para el Logo -->
             <div class="flex items-center">
-                <!-- RUTA CORREGIDA: agromil.agro-web y logo.agromil.agro.png -->
-                <!-- REEMPLAZA [TU-USUARIO] por tu nombre de usuario -->
-                <img src="https://klaudia-clau.github.io/agromil.agro-web/logo.agromil.agro.png" alt="Logo AgroMil.Agro" class="logo-placeholder mr-2" onerror="this.src='https://via.placeholder.com/200x60?text=AgroMil.Agro'">
+                <!-- REEMPLAZA [TU-USUARIO] por tu nombre de usuario de GitHub -->
+                <img src="https://klaudia-clau.github.io/agromil.agro-web/logo.agromil.agro.png" 
+                     alt="AgroMil.Agro" 
+                     class="logo-placeholder mr-2" 
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="text-xl font-bold accent-green hidden" style="font-family: 'Playfair Display', serif;">AgroMil.Agro</span>
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest text-gray-500">
                 <a href="#inicio" class="hover:text-green-700 transition">Inicio</a>
@@ -71,8 +82,10 @@
                     </p>
                 </div>
                 <div class="bg-green-50 p-8 rounded-2xl border border-green-100 text-center">
-                    <!-- RUTA CORREGIDA AQUÍ TAMBIÉN -->
-                    <img src="https://klaudia-clau.github.io/agromil.agro-web/logo.agromil.agro.png" alt="AgroMil.Agro Logo Secundario" class="mx-auto mb-4 opacity-50 w-24 h-24" onerror="this.style.display='none'">
+                    <img src="https://klaudia-clau.github.io/agromil.agro-web/logo.agromil.agro.png" 
+                         alt="AgroMil" 
+                         class="mx-auto mb-4 opacity-50 w-24" 
+                         onerror="this.style.display='none'">
                     <blockquote class="italic text-green-900 text-lg">
                         "En AgroMil.Agro no solo generamos contenido; aplicamos ciencia para que el agricultor adopte el cambio."
                     </blockquote>
@@ -152,8 +165,11 @@
             <a href="mailto:claudia@agromil.agro" class="inline-block px-10 py-5 bg-white text-green-900 rounded-full font-bold text-lg hover:shadow-2xl transition">Contactar a la Dra. Claudity Sol</a>
             <div class="mt-16 pt-8 border-t border-green-800 text-sm text-green-400 flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-4 md:mb-0">
-                    <!-- RUTA CORREGIDA EN EL FOOTER -->
-                    <img src="https://klaudia-clau.github.io/agromil.agro-web/logo.agromil.agro.png" alt="Logo AgroMil.Agro Footer" class="h-8 grayscale brightness-200" onerror="this.src='https://via.placeholder.com/150x40?text=AgroMil.Agro'">
+                    <img src="https://klaudia-clau.github.io/agromil.agro-web/logo.agromil.agro.png" 
+                         alt="AgroMil.Agro" 
+                         class="h-8 grayscale brightness-200" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                    <span class="hidden text-white font-bold italic">AgroMil.Agro</span>
                 </div>
                 <p>&copy; 2024 AgroMil.Agro | Ciencia que impulsa el campo.</p>
             </div>
